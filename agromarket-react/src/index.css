@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #3a7d44;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.cart {
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+main {
+  width: min(100%, 1024px);
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+.catalog-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.catalog-heading h2 {
+  margin: 0;
+}
+
+.catalog-heading input {
+  width: min(100%, 340px);
+  padding: 10px 12px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.catalog-heading input:focus {
+  border-color: #3a7d44;
+  outline: 2px solid rgba(58, 125, 68, 0.2);
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0 4px;
+}
+
+.card p {
+  margin: 4px 0 12px;
+  font-weight: bold;
+}
+
+.card button {
+  background-color: #3a7d44;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #2f6636;
+}
+
+.card button:focus-visible {
+  outline: 3px solid rgba(58, 125, 68, 0.35);
+  outline-offset: 2px;
+}
+
+.status,
+.error {
+  padding: 14px;
+  border-radius: 6px;
+  background: white;
+}
+
+.error {
+  color: #b00020;
+  border: 1px solid #f2b8c1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 560px) {
+  .catalog-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .catalog-heading input {
+    width: 100%;
+  }
+}
